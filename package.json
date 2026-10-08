@@ -1,0 +1,33 @@
+{
+  "name": "cue",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A real-time AI copilot that sees your screen, hears your calls, and remembers your people.",
+  "main": "dist/main.js",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "node scripts/build.mjs && electron .",
+    "dev": "node scripts/build.mjs && electron .",
+    "rehearse": "node scripts/build.mjs && CUE_REHEARSAL=1 electron .",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/*.test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "electron": "^44.7.0",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.132.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "electron@44.7.0": true
+  }
+}
